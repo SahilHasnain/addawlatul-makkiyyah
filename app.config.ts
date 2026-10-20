@@ -12,6 +12,7 @@ export default {
   userInterfaceStyle: 'automatic' as const,
   ios: { icon: './assets/expo.icon' },
   android: {
+    package: 'com.makkiyyah',
     adaptiveIcon: {
       backgroundColor: light.surfaceRaised,
       foregroundImage: './assets/images/android-icon-foreground.png',
@@ -27,4 +28,12 @@ export default {
     'expo-sqlite',
   ],
   experiments: { typedRoutes: true, reactCompiler: true },
+  
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "c1f336e3-9b47-466a-9bd0-f57c6fd74a8b"
+      }
+    }
+  }
 };
