@@ -13,7 +13,7 @@ export default function RootLayout() {
   const routerTheme = scheme === 'dark' ? DarkTheme : DefaultTheme;
 
   return (
-    <SQLiteProvider databaseName="addawlatul-makkiyyah-v2.db" assetSource={{ assetId: require('@/assets/db/addawatul-makkiyyah-mobile.db') }}>
+    <SQLiteProvider databaseName="addawlatul-makkiyyah-v3.db" assetSource={{ assetId: require('@/assets/db/addawatul-makkiyyah-mobile.db') }}>
       <ThemeProvider value={{ ...routerTheme, colors: { ...routerTheme.colors, background: palette.background, card: palette.surface, text: palette.text, border: palette.border, primary: palette.primary } }}>
         <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
         <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: palette.background } }}>
