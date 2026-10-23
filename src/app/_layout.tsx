@@ -18,6 +18,7 @@ export default function RootLayout() {
         <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
         <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: palette.background } }}>
           <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="privacy" options={{ headerShown: false }} />
           <Stack.Screen name="contents/[version]" options={{ headerShown: true, title: 'Contents', headerBackTitle: 'Back' }} />
           <Stack.Screen name="reader/[version]/[entryId]" options={{ headerShown: false }} />
         </Stack>

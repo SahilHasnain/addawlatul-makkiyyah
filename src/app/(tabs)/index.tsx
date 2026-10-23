@@ -1,4 +1,4 @@
-import { router } from 'expo-router';
+import { Link, router } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useEffect, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
@@ -112,6 +112,7 @@ export default function LibraryScreen() {
           <ThemedText style={[styles.noteIcon, { color: palette.primary }]}>✦</ThemedText>
           <View style={styles.noteCopy}><ThemedText style={styles.noteTitle}>A little about this book</ThemedText><ThemedText type="small" themeColor="textSecondary">Explore the writings of Imam Ahmad Raza Khan with a calm, focused reading experience.</ThemedText></View>
         </View>
+        <Link href={'/privacy' as never} style={[styles.privacyLink, { color: palette.primaryStrong }]}>Privacy policy</Link>
       </ScrollView>
     </SafeAreaView>
   );
@@ -146,6 +147,7 @@ const styles = StyleSheet.create({
   noteIcon: { fontSize: 21 },
   noteCopy: { flex: 1, gap: Spacing.one },
   noteTitle: { fontWeight: '700' },
+  privacyLink: { fontSize: 14, fontWeight: '600', textAlign: 'center', paddingVertical: Spacing.two },
   pressed: { opacity: 0.75 },
   disabled: { opacity: 0.55 },
 });
